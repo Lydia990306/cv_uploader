@@ -1,22 +1,19 @@
-# Ignore virtual environment folder
-venv/
-
-# Ignore Python bytecode
-__pycache__/
+# Python and Django
 *.pyc
+__pycache__/
 
-# Ignore Django migrations (optional, you may want to keep them in some cases)
-*/migrations/*
+# Virtual environments
+venv/
+env/
 
-# Ignore database files
-*.sqlite3
-
-# Ignore environment variable files (e.g., .env)
+# Django settings and sensitive data
+*.env
 .env
 
-# Ignore log files
-*.log
+# SQLite database
+*.sqlite3
 
-# Ignore Django media and static files (optional if you want to manage them separately)
-/media/
-/static/
+# Docker-related files
+docker-compose.override.yml
+*.log
+*~backup.sql
