@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin View</title>
+</head>
+<body>
+    <h2>Admin: All User CVs</h2>
+    {% for cv in cvs %}
+        <h3>{{ cv.user.username }}</h3>
+        <p>Email: {{ cv.user.email }}</p>
+        <pre>{{ cv.content }}</pre>
+    {% empty %}
+        <p>No CVs uploaded yet.</p>
+    {% endfor %}
+</body>
+</html>

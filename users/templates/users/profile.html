@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Your Profile</h2>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+
+    {% if cv %}
+        <h3>Your CV Content:</h3>
+        <pre>{{ cv.content }}</pre>
+    {% else %}
+        <p>You have not uploaded a CV yet.</p>
+    {% endif %}
+</body>
+</html>
